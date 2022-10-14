@@ -1,0 +1,14 @@
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main()
+{ int a =20;
+  int b =10;
+if {a > b}
+(
+  return {a};
+)
+}
