@@ -1,1 +1,0 @@
-Debugging practies in alx
