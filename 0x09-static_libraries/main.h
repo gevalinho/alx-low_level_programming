@@ -1,8 +1,6 @@
-fndef MAIN_H
+#ifndef HOLBERTON_H_FILE
 
-#define MAIN_H
-
-#include <stdio.h>
+#define HOLBERTON_H_FILE
 
 
 
@@ -48,4 +46,4 @@ char *_strstr(char *haystack, char *needle);
 
 
 
-#endif /* MAIN_H */
+#endif/
