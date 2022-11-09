@@ -2,8 +2,6 @@
 
 #include "main.h"
 
-
-
 /**
  *  **alloc_grid - creates a two dimensional array of ints
  *
