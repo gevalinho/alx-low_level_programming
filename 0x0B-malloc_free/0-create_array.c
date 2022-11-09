@@ -2,8 +2,6 @@
 
 #include "main.h"
 
-
-
 /**
  *   create_array - creates an array of chars,
  *
@@ -40,8 +38,6 @@ char *create_array(unsigned int size, char c)
 	if (p == NULL)
 
 		return (0);
-
-
 
 	while (i < size)
 
