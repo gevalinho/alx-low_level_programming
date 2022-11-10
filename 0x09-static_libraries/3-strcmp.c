@@ -1,40 +1,27 @@
 #include "main.h"
 
+
 /**
- *   _strcmp - function that compares two strings
+ *   _strcmp - function to copy string
  *
- *   @s2: paramater for string 2
+ *   @s1: first char to compare
  *
- *   @s1: paramater for string 1
+ *   @s2: second char to compare
  *
- *   Return: Always 0.
+ *   Return: int
+ *
  *
  */
 
 int _strcmp(char *s1, char *s2)
-
 {
-
-	int a = 0;
-
-
-
-	while (s1[a] != '\0')
-
+	while (*s1 && *s1 == *s2)
 	{
+		++s1;
 
-		if (s1[a] < s2[a])
-
-			return (s1[a] - s2[a]);
-
-		if (s1[a] > s2[a])
-
-			return (s1[a] - s2[a]);
-
-		a++;
+		++s2;
 
 	}
 
-	return (0);
-
+	return ((int)(unsigned char)(*s1) - (int)(unsigned char)(*s2));
 }

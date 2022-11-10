@@ -1,20 +1,27 @@
-#include <unistd.h>
-
+#include "main.h"
 
 
 /**
- *   _isupper - writes the character c to stdout
+ * _isupper - checks for uppercase character
  *
- *   @c: The character to print
+ *   @c: the character to be checked
  *
- *   Return: 0
+ *   Return: 1 if c is uppercase, 0 otherwise
  *
  */
 
+
+
 int _isupper(int c)
+
+
 
 {
 
-	return 0;
+
+
+		return (c >= 'A' && c <= 'Z');
+
+
 
 }

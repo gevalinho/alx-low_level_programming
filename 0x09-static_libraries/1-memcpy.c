@@ -1,24 +1,26 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
- *   _memcpy - copies n bytes form the memory area src
+ *   *_memcpy - copies memory area
  *
- *   to memory area dest
+ *   @dest: destination memory area
  *
- *   @src: source code to copy
+ *   @src: memory area to copy from
  *
- *   @dest: paramater for destination to  copy to
+ *   @n: number of bytes to copy
  *
- *   @n: how many bytes to copy
- *
- *   Return: dest;
+ *   Return: pointer to dest
  *
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
-
 {
+	unsigned int i;
 
+	for (i = 0; i < n; i++)
+	{
+		dest[i] = src[i];
+
+	}
 	return (dest);
-
 }

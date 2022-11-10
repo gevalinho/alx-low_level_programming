@@ -1,20 +1,43 @@
-#include <unistd.h>
+#include "main.h"
+
 
 /**
- *   _strcat -  function that concatenates two strings.
+ *   _strcat - function to concatenate two strings and return a new string
  *
- *   @src: parameter to a src
+ *   @dest: char 1
  *
- *   @dest: parameter to append
+ *   @src: char 2
  *
- *   Return: Always 0.
+ *   Return: char pointer
  *
  */
 
 char *_strcat(char *dest, char *src)
 
 {
+	int i = 0, j = 0;
 
-	return (dest);
+	char *p;
+
+	while (*(dest + i) != '\0')
+
+		i++;
+
+	while (*(src + j) != '\0')
+
+	{
+		*(dest + i) = *(src + j);
+
+		i++;
+
+		j++;
+
+	}
+
+	*(dest + i) = '\0';
+
+	p = dest;
+
+	return (p);
 
 }

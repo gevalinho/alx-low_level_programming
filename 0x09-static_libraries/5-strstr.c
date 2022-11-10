@@ -3,54 +3,38 @@
 #include <stdio.h>
 
 /**
- *   _strstr - finds the first occurence of the substring needle
+ *   * _strstr - locates a substring
  *
- *   in the string haystack
+ *   @haystack: string to search in
  *
- *   @haystack: paramter for haystack
- *
- *   @needle: paramter for needle
+ *   @needle: substring to look for
  *
  *   Return: pointer to the beginning of the located substring
  *
+ *   or NULL if the substring is not found
+ *
+ *   or NULL if the substring is not found
+ *
  */
 
+
 char *_strstr(char *haystack, char *needle)
-
 {
+	int i, j;
 
-
-
-	while (*haystack != '\0')
-
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-
-		char *beginning = haystack;
-
-		char *pattern = needle;
-
-
-
-		while (*pattern == *haystack && *pattern != '\0'
-
-				&& *haystack != '\0')
-
+		for (j = 0; needle[j] != '\0'; j++)
 		{
+			if (haystack[i + j] != needle[j])
 
-			haystack++;
-
-			pattern++;
-
+				break;
 		}
 
-		if (*pattern == '\0')
+		if (!needle[j])
 
-			return (beginning);
-
-		haystack = beginning + 1;
-
+			return (&haystack[i]);
 	}
 
-	return ('\0');
-
+	return (NULL);
 }

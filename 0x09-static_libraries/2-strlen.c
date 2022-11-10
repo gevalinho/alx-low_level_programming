@@ -1,28 +1,59 @@
-#include <unistd.h>
+#include "main.h"
+
 
 /**
- *   _strlen - check the code for Holberton School students.
+ *   _strlen - returns the length of a string
  *
- *   @s: declaration of *s and paramters for the function _strlen
+ *   @s: string to evaluate
  *
- *   Return: Always 0.
+ *   Return: the length of the string
  *
  */
 
+
+
 int _strlen(char *s)
+
+
 
 {
 
-	int c;
+
+
+	int i;
 
 
 
-	for (c = 0; s[c] != 0; c++)
+
+
+
+
+	i = 0;
+
+
+
+
+
+
+
+	while (s[i] != '\0')
+
+
 
 	{
 
+
+
+		i++;
+
+
+
 	}
 
-	return (c);
+
+
+	return (i);
+
+
 
 }

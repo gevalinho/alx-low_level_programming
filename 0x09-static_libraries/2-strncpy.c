@@ -1,53 +1,39 @@
+#include "main.h"
+
 /**
+ *  _strncpy - function to copy string
  *
- *   _strncpy - check the code for Holberton School students.
  *
- *   @src: parameter to a src to copy
+ *  @dest:char to copy to
  *
- *   @dest: parameter for dest
  *
- *   @n: parameter for number of bytes
+ *  @src: char to copy from
  *
- *   Return: Always 0.
+ *  @n: number of chars to copy
+ *
+ *
+ *  Return: char pointer
+ *
  *
  */
-
-
 
 char *_strncpy(char *dest, char *src, int n)
 
 {
+	int i, j;
 
-	int a = 0;
-
-	int b = 0;
-
-
-
-	while (a != n)
-
+	for (i = 0; i < n; i++)
 	{
-
-		dest[b] = src[a];
-
-		b++;
-
-		a++;
-
-		if (src[a] == '\0')
-
+		if (src[i] == '\0')
 		{
+			for (j = i; j < n && dest[j] != '\0'; j++)
 
+				dest[j] = '\0';
 			break;
-
 		}
 
+		dest[i] = src[i];
 	}
 
-	while (b != n)
-
-		dest[b++] = '\0';
-
 	return (dest);
-
 }
