@@ -1,65 +1,21 @@
 #include <stdlib.h>
 
-#include <stdio.h>
-
 #include "main.h"
 
-#include <string.h>
-
-
-
-/**
- *   *_calloc - allocate memory for an array usingmalloc
- *
- *   * @nmemb: number ofelements
- *
- *   @size: size of bytes
- *
- *   Return: pointer
- *
- */
-
-
-
-void *_calloc(unsigned int nmemb, unsigned int size)
-
-{
-
-	void *ptr;
-
-
-
-	if (nmemb == 0 || size == 0)
-
-		return (NULL);
-
-	ptr = malloc(nmemb * size);
-
-	if (ptr == NULL)
-
-		return (NULL);
-
-	_memset(ptr, 0, (nmemb * size));
-
-	return (ptr);
-
-}
 
 
 /**
- *   *_memset - sets first n bytes of the memory area
+ * *_memset - fills memory with a constant byte
  *
- *   * @s: array to set
+ *   * @s: memory area to be filled
  *
- *   * @b: what to set it to
+ *   * @b: char to copy
  *
- *   * @n: first n bytes
- *
- *   Return: s
+ *   * @n: number of times to copy b
+ * 
+ *   Return: pointer to the memory area s
  *
  */
-
-
 
 char *_memset(char *s, char b, unsigned int n)
 
@@ -77,6 +33,53 @@ char *_memset(char *s, char b, unsigned int n)
 
 	}
 
+
+
 	return (s);
+
+}
+
+
+
+/**
+ * *_calloc - allocates memory for an array
+ *
+ *   * @nmemb: number of elements in the array
+ *
+ *   * @size: size of each element
+ *
+ *   Return: pointer to allocated memory
+ *
+ */
+
+void *_calloc(unsigned int nmemb, unsigned int size)
+
+{
+
+	char *ptr;
+
+
+
+	if (nmemb == 0 || size == 0)
+
+		return (NULL);
+
+
+
+	ptr = malloc(size * nmemb);
+
+
+
+	if (ptr == NULL)
+
+		return (NULL);
+
+
+
+	_memset(ptr, 0, nmemb * size);
+
+
+
+	return (ptr);
 
 }
