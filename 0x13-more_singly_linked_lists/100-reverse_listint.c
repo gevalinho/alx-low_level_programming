@@ -1,4 +1,4 @@
-nclude "lists.h"
+#include "lists.h"
 
 /**
  *  reverse_listint - reverses a linked list
@@ -12,14 +12,14 @@ listint_t *next = NULL;
 
 while (*head != NULL)
 {
-next = (*head)->next;
-(*head)->next = prev;
-prev = *head;
-*head = next;
+next = *head;
+*head = (*head)->next;
+next->next = prev;
+prev = next;
 
 }
 
-*head = prev;
+*head = next;
 
 return (*head);
 }
