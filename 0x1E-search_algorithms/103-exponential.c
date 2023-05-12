@@ -47,7 +47,7 @@ return (-1);
 while (size)
 {
 for (i = 0, printf("Searching in array: "); i < size; i++)
- printf("%d%s", a[i], i + 1 == size ? "\n" : ", ");
+printf("%d%s", a[i], i + 1 == size ? "\n" : ", ");
 
 i = (size - 1) / 2;
 if (a[i] == value)
@@ -60,5 +60,5 @@ a += (i + 1);
 size -= (i + 1);
 }
 }
-    return (-1);
+return (-1);
 }
